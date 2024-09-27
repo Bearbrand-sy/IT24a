@@ -1,18 +1,16 @@
 class LeafletMap {
+
     constructor(containerId, center, zoom) {
         this.map = L.map(containerId).setView(center, zoom);
         this.initTileLayer();
     }
 
     initTileLayer() {
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Sample from new corales'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Sample for new corales BSIT student'
         }).addTo(this.map);
     }
 
-    addMarker(lat, long, message) {
-
-    }
-
 }
+const Mymap = new LeafletMap('map', [51.505, -0.09], 13);
