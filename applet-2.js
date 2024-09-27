@@ -16,5 +16,12 @@ class LeafletMap {
         const marker = L.marker([lat, long]).addTo(this.map)
         .bindPopup(message);
     }
+
+
 }
-const Mymap = new LeafletMap('map', [51.505, -0.09], 13);
+const Mymap = new LeafletMap('map', [8.371400, 124.855103], 13);
+
+
+Mymap.addMarker(8.359735, 124.869206, 'CCS Faculty Office');
+Mymap.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
+Mymap.addMarker(8.359554, 124.869153, 'CCS Laboratory 2');
