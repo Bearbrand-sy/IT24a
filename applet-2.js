@@ -30,7 +30,7 @@ class LeafletMap {
     
 
 }
-const Mymap = new LeafletMap('map', [8.371400, 124.855103], 13);
+const Mymap = new LeafletMap('map', [8.371400, 124.855103], 18);
 
 
 Mymap.addMarker(8.359735, 124.869206, 'CCS Faculty Office');
