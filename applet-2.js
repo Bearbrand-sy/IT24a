@@ -11,6 +11,10 @@ class LeafletMap {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Sample for new corales BSIT student'
         }).addTo(this.map);
     }
-
+      
+    addMarker(lat, long, message){
+        const marker = L.marker([lat, long]).addTo(this.map)
+        .bindPopup(message);
+    }
 }
 const Mymap = new LeafletMap('map', [51.505, -0.09], 13);
