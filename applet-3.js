@@ -6,8 +6,8 @@ class DataLogger{
         this.logCountElement = document.getElementById(logCountId);
         this.loggedData = [];     
 
-        this.logButton = addEventListener('click', () => this.logData());
-        this.clearButton = addEventListener('click', () => this.clearLogs());
+        this.logButton.addEventListener('click', () => this.logData());
+        this.clearButton.addEventListener('click', () => this.clearLogs());
     }
     logData(){
         const time = new Date().toLocaleDateString();
@@ -42,6 +42,8 @@ class DataLogger{
         const logCount = this.countLogs();
         this.logCountElement.innerHTML = `<p>Total Logs: ${logCount}</p>`; 
     }
-    
-    
 }
+
+    document.addEventListener('DOMContentLoaded', () => {
+    new DataLogger('logButton', 'idContainer', 'clearButton', 'logCount'); 
+    });
