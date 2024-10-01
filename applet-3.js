@@ -9,4 +9,8 @@ class DataLogger{
         this.logButton = addEventListener('click', () => this.logData());
         this.clearButton = addEventListener('click', () => this.clearLogs());
     }
+    logData(){
+        const time = new Date().toLocaleDateString();
+        this.loggedData.push(time);
+    }
 }
