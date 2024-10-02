@@ -8,6 +8,8 @@ class LeafletMap {
         this.attendanceCountBA = 0;
         this.attendanceCountLab = 0;
 
+        this.markerCounts = {};
+
         this.loggedData = []; 
 
         this.btn = document.getElementById('btn');
@@ -34,6 +36,7 @@ class LeafletMap {
       
     addMarker(lat, long, message){
         const marker = L.marker([lat, long]).addTo(this.map)
+
         .bindPopup(message);
     }
 
