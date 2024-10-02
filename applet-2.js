@@ -51,16 +51,28 @@ class LeafletMap {
     dataSc() {
         this.addMarker(8.360238, 124.867470, 'SC building');
         this.attendanceCountSC++; 
+        this.updateLogDisplay();
     }
 
     dataBa() {
         this.addMarker(8.359134, 124.868537, 'BA building');
         this.attendanceCountBA++;
+        this.updateLogDisplay();
     }
     
     dataLab() {
         this.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
         this.attendanceCountLab++;
+        this.updateLogDisplay();
+    }
+
+    updateLogDisplay() {
+        this.idContainer.innerHTML = ''; 
+        this.loggedData.forEach(data => {
+            const logItem = document.createElement('div');
+            logItem.className = 'log-item';
+            this.idContainer.appendChild(logItem);
+        });
     }
 
 }
