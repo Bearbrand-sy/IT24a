@@ -8,6 +8,9 @@ class LeafletMap {
         this.attendanceCountBA = 0;
         this.attendanceCountLab = 0;
 
+        this.markerCounts = {};
+        this.markers = [];
+
         this.loggedData = []; 
 
         this.btn = document.getElementById('btn');
@@ -34,7 +37,19 @@ class LeafletMap {
       
     addMarker(lat, long, message){
         const marker = L.marker([lat, long]).addTo(this.map)
-        .bindPopup(message);
+        this.markerCounts[message] = (this.markerCounts[message] || 0) + 1;
+        this.updateMarkerPopup(marker, message);
+        marker.on('click', () => {
+            this.markerCounts[message]++;
+            this.updateMarkerPopup(marker, message);
+        });
+
+        this.markers.push(marker);
+    }
+
+    updateMarkerPopup(marker, message) {
+        const count = this.markerCounts[message];
+        marker.bindPopup(`${message}<br>Attendance logs: ${count}`).openPopup();
     }
 
     loadMarkersFromJson(url) {
@@ -54,6 +69,13 @@ class LeafletMap {
         this.attendanceCountLab = 0;
 
         this.loggedData = [];
+        this.markerCounts = {}; 
+        this.markers.forEach(marker => {
+            const message = marker.getPopup().getContent().split('<br>')[0]; 
+            this.markerCounts[message] = 0;
+            this.updateMarkerPopup(marker, message); 
+        });
+
         this.updateLogDisplay();
     }
 
