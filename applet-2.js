@@ -100,3 +100,8 @@ Mymap.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
 Mymap.addMarker(8.359554, 124.869153, 'CCS Laboratory 2');
 
 Mymap.loadMarkersFromJson('applet-2.json');
+
+document.addEventListener('DOMContentLoaded', () => {
+    Mymap.displayLogCount();
+    Mymap.loadMarkersFromJson('applet-2.json');
+});
