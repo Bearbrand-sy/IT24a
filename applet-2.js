@@ -58,6 +58,10 @@ class LeafletMap {
         this.attendanceCountBA++;
     }
     
+    dataLab() {
+        this.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
+        this.attendanceCountLab++;
+    }
 
 }
 const Mymap = new LeafletMap('map', [8.359735, 124.869206], 18);
