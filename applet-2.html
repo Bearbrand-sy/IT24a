@@ -28,6 +28,26 @@
             height: 450px;
           
         }
+
+        .btn-container{
+          justify-items: auto;
+          margin-top: 2rem;
+          background: linear-gradient(to top right, rgb(0, 0, 0), rgb(1, 1, 43)) ;
+          border-radius: 15px;
+          padding: 3rem;
+        }
+
+        .btn-container h4{
+            margin-bottom: 1.5rem;
+        }
+        .btn-container button{
+           margin-bottom: 1.5rem;
+        }
+
+        .btn-container #btnclear {
+           margin-left: 15rem;
+        }
+        
     </style>
 </head>
 
@@ -70,14 +90,17 @@
     <div class="container">
         <h2>Leaflet Map</h2>
         <div id="map"></div>
-           <h4 id="logCount">Attendance Count: </h4>
-           <button class="btn btn-primary" id="btn">SC Building</button>
-               <h4 id="logCountCCS">Attendance Count: </h4>
-               <button class="btn btn-primary" id="btn1">CSS Laboratory 1</button>
-                    <h4 id="logCountBA">Attendance Count: </h4>
-                    <button class="btn btn-primary" id="btn2">BA building</button>
-                       <div id="logContainer"></div> 
-                       <button class="btn btn-primary" id="btnclear">Clear</button>
+        <div class="btn-container">
+          <h4 id="logCount">Attendance Count: </h4>
+          <button class="btn btn-primary" id="btn">SC Building</button>
+              <h4 id="logCountCCS">Attendance Count: </h4>
+              <button class="btn btn-primary" id="btn1">CSS Laboratory 1</button>
+                   <h4 id="logCountBA">Attendance Count: </h4>
+                   <button class="btn btn-primary" id="btn2">BA building</button>
+                      <div id="logContainer"></div> 
+                      <button class="btn btn-primary" id="btnclear">Clear</button>
+        </div>
+          
     </div>
 
 </body>
