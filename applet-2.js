@@ -70,7 +70,12 @@ class LeafletMap {
 
         this.loggedData = [];
         this.markerCounts = {}; 
-        
+        this.markers.forEach(marker => {
+            const message = marker.getPopup().getContent().split('<br>')[0]; 
+            this.markerCounts[message] = 0;
+            this.updateMarkerPopup(marker, message); 
+        });
+
         this.updateLogDisplay();
     }
 
