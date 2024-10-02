@@ -52,6 +52,11 @@ class LeafletMap {
         this.addMarker(8.360238, 124.867470, 'SC building');
         this.attendanceCountSC++; 
     }
+
+    dataBa() {
+        this.addMarker(8.359134, 124.868537, 'BA building');
+        this.attendanceCountBA++;
+    }
     
 
 }
