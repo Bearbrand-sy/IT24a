@@ -48,6 +48,15 @@ class LeafletMap {
         .catch(error => console.error("Error Loading servers:", error));
     }
 
+    clearLogs(){
+        this.attendanceCountSC = 0;
+        this.attendanceCountBA = 0;
+        this.attendanceCountLab = 0;
+
+        this.loggedData = [];
+        this.updateLogDisplay();
+    }
+
     displayLogCount() {      
         this.logCountElement.innerHTML = `SC Building Attendance: ${this.attendanceCountSC}`;
         this.logCount1Element.innerHTML = `BA Building Attendance: ${this.attendanceCountBA}`;
