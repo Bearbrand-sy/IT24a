@@ -48,6 +48,12 @@ class LeafletMap {
         .catch(error => console.error("Error Loading servers:", error));
     }
 
+    displayLogCount() {      
+        this.logCountElement.innerHTML = `SC Building Attendance: ${this.attendanceCountSC}`;
+        this.logCount1Element.innerHTML = `BA Building Attendance: ${this.attendanceCountBA}`;
+        this.logCount2Element.innerHTML = `CCS Laboratory Attendance: ${this.attendanceCountLab}`;
+   }
+
     dataSc() {
         this.addMarker(8.360238, 124.867470, 'SC building');
         this.attendanceCountSC++; 
@@ -73,6 +79,7 @@ class LeafletMap {
             logItem.className = 'log-item';
             this.idContainer.appendChild(logItem);
         });
+        this.displayLogCount();
     }
 
 }
