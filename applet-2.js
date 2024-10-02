@@ -69,6 +69,8 @@ class LeafletMap {
         this.attendanceCountLab = 0;
 
         this.loggedData = [];
+        this.markerCounts = {}; 
+        
         this.updateLogDisplay();
     }
 
