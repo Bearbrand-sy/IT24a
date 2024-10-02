@@ -44,6 +44,7 @@ class LeafletMap {
             this.updateMarkerPopup(marker, message);
         });
 
+        this.markers.push(marker);
     }
 
     updateMarkerPopup(marker, message) {
