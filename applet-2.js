@@ -47,6 +47,11 @@ class LeafletMap {
         })
         .catch(error => console.error("Error Loading servers:", error));
     }
+
+    dataSc() {
+        this.addMarker(8.360238, 124.867470, 'SC building');
+        this.attendanceCountSC++; 
+    }
     
 
 }
