@@ -3,4 +3,7 @@ class studentList{
            this.dataUrl = dataUrl;
            this.students = [];
     }
+    async init(){
+           
+    }
 }
