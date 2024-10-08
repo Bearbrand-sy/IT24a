@@ -26,5 +26,15 @@ class studentList{
         ).join('');
         
     }
+    bindSearchEvent(){
+        const studentSearchBar = document.getElementById('studentSearchBar');
+        const studentSearchListContainer = document.getElementById('studentSearchList');
+
+        studentSearchBar.addEventListener('input', () => {
+            this.filterStudents(studentSearchBar.value, studentSearchListContainer);
+        });
+
+        this.renderStudentList(this.students, studentSearchListContainer);
+    }
 
 }
