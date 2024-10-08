@@ -7,6 +7,9 @@ class studentList{
            
     }
     async fetchData(){
+
+    }
+    renderStudentList(students){
         
     }
 }
