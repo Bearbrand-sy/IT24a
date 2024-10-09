@@ -27,3 +27,6 @@ class cardSearch {
     }
 
 }
+   document.addEventListener('DOMContentLoaded', () => {
+    new cardSearch('cardSearch', 'container2');
+    });
