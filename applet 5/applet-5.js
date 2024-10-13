@@ -23,5 +23,11 @@ class WeatherApp{
         this.description.textContent = `Weather: ${data.weather[0].description}`;
         this.humidity.textContent = `Humidity: ${data.main.humidity}%`;
         this.windSpeed.textContent = `Wind Speed: ${data.wind.speed} m/s`;
+
+        this.weatherCard.style.display = 'block';
     }
+}
+
+class WeatherService extends WeatherApp {
+
 }
