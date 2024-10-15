@@ -1,7 +1,5 @@
 class WeatherApp{
-    constructor(apiKey){
-        this.apiKey = apiKey;
-
+    constructor(){
         this.cityInput = document.getElementById('cityInput');
         this.getWeatherBtn = document.getElementById('getWeatherBtn');
 
@@ -13,6 +11,7 @@ class WeatherApp{
         this.description = document.getElementById('description');
         this.humidity = document.getElementById('humidity');
         this.windSpeed = document.getElementById('windSpeed');
+        this.APIKeyInput = document.getElementById('apiInput');
 
         this.getWeatherBtn.addEventListener('click', () => this.fetchWeather());
         this.getLocationBtn.addEventListener('click', () => this.fetchWeatherByLocation());
@@ -104,5 +103,5 @@ class WeatherService extends WeatherApp {
 
 }
 
-const apiKey = ''; 
-const weatherApp = new WeatherService(apiKey);
+
+const weatherApp = new WeatherService();
