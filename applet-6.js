@@ -68,3 +68,14 @@ class todoList{
     }
 
 }
+
+class TimestampedTodoList extends todoList {
+    addTask(taskText) {
+        super.addTask(taskText);
+        const taskItem = this.todoList.lastChild; 
+        const timestamp = document.createElement('span');
+        timestamp.className = 'timestamp';
+        timestamp.textContent = new Date().toLocaleString();
+        taskItem.appendChild(timestamp);
+    }
+}
