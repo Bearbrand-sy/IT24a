@@ -26,6 +26,7 @@ class todoList{
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item todo-item';
         listItem.innerHTML = `
+            <div class="card">
             <span class="task-text">${taskText}</span>
             <span class="timestamp" style="display: block; margin-top: 0.5rem; color: gray;">Date Added: ${new Date().toLocaleString()}</span>
             <div style="margin-top: 0.5rem;">
@@ -33,6 +34,7 @@ class todoList{
                 <button class="btn btn-warning btn-sm editButton">Edit</button>
                 <button class="btn btn-danger btn-sm removeButton">Remove</button>
             </div>
+             </div>
         `;
         this.todoList.appendChild(listItem);
     }
